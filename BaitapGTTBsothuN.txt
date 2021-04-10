@@ -1,0 +1,30 @@
+package demo.basic;
+
+import java.util.Scanner;
+
+public class baitap01 {
+
+	public static void main(String[] args) {
+	
+		double sum = 0;
+		int totalNumber;
+		int x=1;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Nhập vào tổng con số bạn muốn tính gia trị trung bình");
+		totalNumber = sc.nextInt();
+		
+		while (x<=totalNumber) {
+			System.out.format("Số thứ (%d):",x);
+			//cộng vào sum gtri nhập từ bàn phím
+			sum += sc.nextInt();
+			//tiếp tục tăng x lên 1 giá trị
+			x +=1;
+		}
+		
+		double GTTB = (sum/totalNumber);
+		
+		System.out.printf("Giá trị trung bình là (%f)",GTTB);
+	}
+
+}
